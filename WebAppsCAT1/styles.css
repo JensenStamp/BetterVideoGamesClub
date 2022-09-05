@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    text-align: center;
+}
+
+:root {
+    background-color: #181818;
+    color: white;
+    font-family: Inter, sans-serif;
+}
+
+.container {
+    margin-top: 40px;
+    margin-right: 350px;
+    margin-left: 350px;
+}
+
+.navbar-title {
+    margin-left: 10px;
+    font-weight: 600;
+    padding-top: 14px;
+    margin-right: 6px;
+}
+
+.navbar {
+    display: flex;
+    background-color: #1c1b1b;
+}
+
+.navbar-item {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 6px;
+}
+
+.navbar-item:hover {
+    background-color: #2D2F31;
+}
+
+.better-compass-blue {
+    background: -webkit-radial-gradient(#0179f3,#0190ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.text-down {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.large-image {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
