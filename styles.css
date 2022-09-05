@@ -41,18 +41,18 @@
     background-color: #2D2F31;
 }
 
-.better-compass-blue {
+.bettercompass-blue {
     background: -webkit-radial-gradient(#0179f3,#0190ea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .title {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .text-down {
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -65,5 +65,8 @@
 
 .left {
     text-align: left;
+}
 
+.active {
+    background: #0a70b0;
 }
