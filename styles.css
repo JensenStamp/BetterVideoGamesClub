@@ -11,8 +11,8 @@
 
 .container {
     margin-top: 40px;
-    margin-right: 350px;
-    margin-left: 350px;
+    margin-right: 430px;
+    margin-left: 430px;
 }
 
 .navbar-title {
@@ -25,6 +25,9 @@
 .navbar {
     display: flex;
     background-color: #1c1b1b;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar-item {
@@ -69,4 +72,12 @@
 
 .active {
     background: #0a70b0;
+}
+
+.lefter {
+}
+
+a {
+    color: #0190ea;
+    text-decoration: none;
 }
