@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="dark" id="body">
 <div class="navbar">
   <a href="index.html" class="navbar-title bettercompass-blue">BetterVideoGames™ Club</a>
   <a href="index.html" class="navbar-item">Home</a>
@@ -20,17 +20,32 @@
   <a href="comp.html" class="navbar-item">Competitions</a>
   <a href="gallery.html" class="navbar-item">Gallery</a>
   <a href="members.html" class="navbar-item active">Members</a>
+  <div class="navbar2">
+    <a onclick="switchTheme()" class="navbar-item" style="justify-self: end">Theme switcher</a>
+  </div>
 </div>
 <br><br><h1 class="bettercompass-blue title">Members and Reviews</h1>
 <div class="container">
-  <h3>Our Community Members</h3>
+  <h3>Our Community Members</h3><br>
   <img style="width: 25%;" src="images/download.png" alt="A picture of some members">
   <img style="width: 29.5%;" src="images/member.png" alt="Female member">
   <img style="width: 25%;" src="images/member2.png" alt="Male member">
   <img style="width: 25%;" src="images/members.png" alt="A group of members">
 </div>
-
+<div class="footer">
+  <p class="footer-item">Author: Jolt707</p>
+  <p class="footer-item"><a href="mailto:bettervideogames@gmail.com">Email us!</a></p>
+  <p class="footer-item"><a href="https://github.com/JensenStamp/BetterVideoGamesClub" target="_blank">Site Source Code</a></p>
+</div>
 
 </body>
-
+<script>let light = localStorage.getItem("light") === "true"
+const body = document.getElementById("body")
+body.className = light ? "light" : "dark"
+function switchTheme() {
+  light = !light
+  localStorage.setItem("light", light)
+  body.className = light ? "light" : "dark"
+}</script>
 </html>
+

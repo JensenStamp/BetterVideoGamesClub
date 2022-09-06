@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Only works on 1080p monitors -->
+<!-- Matt sent theme switcher code -->
 <head>
     <meta charset="utf-8">
     <title>Club Home</title>
@@ -12,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="dark" id="body">
 <div class="navbar">
     <a href="index.html" class="navbar-title bettercompass-blue">BetterVideoGames™ Club</a>
     <a href="index.html" class="navbar-item active">Home</a>
@@ -20,24 +21,40 @@
     <a href="comp.html" class="navbar-item">Competitions</a>
     <a href="gallery.html" class="navbar-item">Gallery</a>
     <a href="members.html" class="navbar-item">Members</a>
+    <div class="navbar2">
+        <a onclick="switchTheme()" class="navbar-item" style="justify-self: end">Theme switcher</a>
+    </div>
 </div>
+
 <br><br><h1 class="bettercompass-blue title">Video Games Club!</h1>
 <div class="container">
     <h3>Welcome to BetterVideoGames, a video games club for all types of gamers!</h3>
-    <p>Current top games from our members:</p>
-    <ul style="margin-top: 10px; width: 250px; margin-left: 39%;">
+    <p class="text-down">Current top games from our members:</p>
+    <ul style="margin-top: 10px; width: 250px;">
         <li class="left">The Elder Scrolls V: Skyrim</li>
         <li class="left">Super Smash Bros.</li>
         <li class="left">Far Cry 6</li>
         <li class="left">Halo Infinite</li>
         <li class="left">Call of Duty: Modern Warfare</li>
     </ul>
-    <h3 style="margin-top: 30px">About us!</h3>
-    <p>BetterVideoGames Club is a club designed to bring the local video games community together! We hold events and
+    <h3 class="text-down">About us!</h3>
+    <p class="text-down">BetterVideoGames Club is a club designed to bring the local video games community together! We hold events and
         competitions to strengthen the bonds of our members through their passion of video games. Every few weeks we hold
         meetings and talk about our favourite games and what we have been playing recently.
     </p>
 </div>
+<div class="footer">
+    <p class="footer-item">Author: Jolt707</p>
+    <p class="footer-item"><a href="mailto:bettervideogames@gmail.com">Email us!</a></p>
+    <p class="footer-item"><a href="https://github.com/JensenStamp/BetterVideoGamesClub" target="_blank">Site Source Code</a></p>
+</div>
 </body>
- 
+<script>let light = localStorage.getItem("light") === "true"
+const body = document.getElementById("body")
+body.className = light ? "light" : "dark"
+function switchTheme() {
+  light = !light
+  localStorage.setItem("light", light)
+  body.className = light ? "light" : "dark"
+}</script>
 </html>

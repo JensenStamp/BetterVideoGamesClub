@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Only works on 1080p monitors -->
+
 <head>
     <meta charset="utf-8">
     <title>Competitions!</title>
@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="dark" id="body">
 <div class="navbar">
     <a href="index.html" class="navbar-title bettercompass-blue">BetterVideoGames™ Club</a>
     <a href="index.html" class="navbar-item">Home</a>
@@ -20,12 +20,15 @@
     <a href="comp.html" class="navbar-item">Competitions</a>
     <a href="gallery.html" class="navbar-item">Gallery</a>
     <a href="members.html" class="navbar-item">Members</a>
+    <div class="navbar2">
+        <a onclick="switchTheme()" class="navbar-item" style="justify-self: end">Theme switcher</a>
+    </div>
 </div>
 <br><br><h1 class="bettercompass-blue title">Super Smash Bros. Brawlin'</h1>
 <div class="container">
     <h3>Starting on 20/09/22, save the date!</h3>
     <h4 class="text-down">Rules for Super Smash Bros. Brawlin' tournament</h4>
-    <ul style="margin-top: 10px; width: 250px; margin-left: 43%;">
+    <ul class="text-down">
         <li class="left">Format: 2v2</li>
         <li class="left">Time limit: 10:00</li>
         <li class="left">Fighters: All</li>
@@ -34,8 +37,20 @@
     </ul>
     <img class="large-image" src="images/supersmashcomp.jpg" alt="supersmashbros">
 </div>
+<div class="footer">
+    <p class="footer-item">Author: Jolt707</p>
+    <p class="footer-item"><a href="mailto:bettervideogames@gmail.com">Email us!</a></p>
+    <p class="footer-item"><a href="https://github.com/JensenStamp/BetterVideoGamesClub" target="_blank">Site Source Code</a></p>
+</div>
 
 
 </body>
-
+<script>let light = localStorage.getItem("light") === "true"
+const body = document.getElementById("body")
+body.className = light ? "light" : "dark"
+function switchTheme() {
+  light = !light
+  localStorage.setItem("light", light)
+  body.className = light ? "light" : "dark"
+}</script>
 </html>

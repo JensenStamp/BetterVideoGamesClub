@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="dark" id="body">
 <div class="navbar">
     <a href="index.html" class="navbar-title bettercompass-blue">BetterVideoGames™ Club</a>
     <a href="index.html" class="navbar-item">Home</a>
@@ -20,17 +20,32 @@
     <a href="comp.html" class="navbar-item active">Competitions</a>
     <a href="gallery.html" class="navbar-item">Gallery</a>
     <a href="members.html" class="navbar-item">Members</a>
+    <div class="navbar2">
+        <a onclick="switchTheme()" class="navbar-item" style="justify-self: end">Theme switcher</a>
+    </div>
 </div>
 <br><br><h1 class="bettercompass-blue title">Super Smash Bros. Brawlin'</h1>
 <div class="container">
     <h3>Starting on 20/09/22</h3>
     <h4 class="text-down">The day of the competition is soon! Our competition details and how to join will be linked <a href="compinfo.html">here</a></h4>
-    <p>Since we have gained more members we are hoping this will be out best tournament yet! So grab your Nintendo
+    <p class="text-down">Since we have gained more members we are hoping this will be out best tournament yet! So grab your Nintendo
         Switches and get ready for an amazing day of fun, you should start practicing with your main to improve your skills.
     </p>
+</div>
+<div class="footer">
+    <p class="footer-item">Author: Jolt707</p>
+    <p class="footer-item"><a href="mailto:bettervideogames@gmail.com">Email us!</a></p>
+    <p class="footer-item"><a href="https://github.com/JensenStamp/BetterVideoGamesClub" target="_blank">Site Source Code</a></p>
 </div>
 
 
 </body>
-
+<script>let light = localStorage.getItem("light") === "true"
+const body = document.getElementById("body")
+body.className = light ? "light" : "dark"
+function switchTheme() {
+  light = !light
+  localStorage.setItem("light", light)
+  body.className = light ? "light" : "dark"
+}</script>
 </html>

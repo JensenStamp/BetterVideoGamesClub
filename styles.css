@@ -1,14 +1,22 @@
 * {
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 :root {
-    background-color: #181818;
-    color: white;
+
     font-family: Inter, sans-serif;
 }
 
+.dark {
+    background-color: #181818;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
 .container {
     margin-top: 40px;
     margin-right: 430px;
@@ -19,10 +27,10 @@
     margin-left: 10px;
     font-weight: 600;
     padding-top: 14px;
-    margin-right: 6px;
+    margin-right: 11px;
 }
 
-.navbar {
+.dark .navbar {
     display: flex;
     background-color: #1c1b1b;
     position: fixed;
@@ -30,18 +38,52 @@
     width: 100%;
 }
 
+.light .navbar {
+    display: flex;
+    background-color: whitesmoke;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: black;
+}
+
+.dark .navbar2 {
+    justify-content: end;
+    display: flex;
+    background-color: #1c1b1b;
+    right: 0;
+    position: fixed;
+    top: 0;
+}
+
+.light .navbar2 {
+    justify-content: end;
+    display: flex;
+    background-color: whitesmoke;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: black;
+}
+
 .navbar-item {
-    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    margin-left: 6px;
 }
 
-.navbar-item:hover {
+.light .navbar-item {
+    color: black;
+}
+
+.dark .navbar-item:hover {
     background-color: #2D2F31;
+}
+
+.light .navbar-item:hover {
+    background-color: #d9dade;
 }
 
 .bettercompass-blue {
@@ -52,11 +94,11 @@
 
 .title {
     margin-top: 40px;
+    text-align: center;
 }
 
 .text-down {
-    margin-top: 40px;
-    text-align: center;
+    margin-top: 10px;
 }
 
 .large-image {
@@ -72,12 +114,39 @@
 
 .active {
     background: #0a70b0;
+    color: white !important;
 }
 
-.lefter {
+.active:hover {
+    background: #0a70b0 !important;
 }
 
 a {
     color: #0190ea;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.dark .footer {
+    text-align: center;
+    display: flex;
+    background-color: #1c1b1b;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.light .footer {
+    text-align: center;
+    display: flex;
+    background-color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer-item {
+    padding: 7px 8px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 3px;
 }
