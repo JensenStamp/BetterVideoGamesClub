@@ -18,6 +18,7 @@
 }
 .container {
     text-align: center;
+    min-height: 83.7vh;
 }
 
 .navbar-title {
@@ -131,8 +132,7 @@ a {
 .footer {
     text-align: center;
     display: flex;
-    position: fixed;
-    bottom: 0;
+    position: static;
     width: 100%;
 }
 
