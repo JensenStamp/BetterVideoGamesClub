@@ -22,7 +22,16 @@
   <a href="members.html" class="navbar-item">Members</a>
   <div class="navbar2">
     <a onclick="switchTheme()" class="navbar-item" style="justify-self: end">Theme switcher</a>
+    <a class="hamburger" onclick="mobileNavbar()">☰</a>
   </div>
+</div>
+<div class="mobile-navbar" id="mobile-navbar">
+  <a href="index.html" class="mobile-navbar-item">Home</a>
+  <a href="news.html" class="mobile-navbar-item">News</a>
+  <a href="comp.html" class="mobile-navbar-item">Competitions</a>
+  <a href="gallery.html" class="mobile-navbar-item active">Gallery</a>
+  <a href="members.html" class="mobile-navbar-item">Members</a>
+  <a onclick="switchTheme()" class="mobile-navbar-item" style="justify-self: end">Theme switcher</a>
 </div>
 <br><br><h1 class="bettercompass-blue title">Video Games Club!</h1>
 <div class="container">
@@ -47,12 +56,22 @@
 </div>
 
 </body>
-<script>let light = localStorage.getItem("light") === "true"
-const body = document.getElementById("body")
-body.className = light ? "light" : "dark"
-function switchTheme() {
-  light = !light
-  localStorage.setItem("light", light)
+<script>
+  let light = localStorage.getItem("light") === "true"
+  const body = document.getElementById("body")
   body.className = light ? "light" : "dark"
-}</script>
+  function switchTheme() {
+    light = !light
+    localStorage.setItem("light", light)
+    body.className = light ? "light" : "dark"
+  }
+  function mobileNavbar() {
+    const x = document.getElementById("mobile-navbar");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
 </html>

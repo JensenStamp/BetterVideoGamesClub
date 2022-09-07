@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Only works on 1080p monitors -->
 <!-- Matt sent theme switcher code -->
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club Home</title>
 
     <link rel="icon" type="image/x-icon" href="favicon.png">
@@ -23,19 +23,28 @@
     <a href="members.html" class="navbar-item">Members</a>
     <div class="navbar2">
         <a onclick="switchTheme()" class="navbar-item" style="justify-self: end">Theme switcher</a>
+        <a class="hamburger" onclick="mobileNavbar()">☰</a>
     </div>
+</div>
+<div class="mobile-navbar" id="mobile-navbar">
+    <a href="index.html" class="mobile-navbar-item active">Home</a>
+    <a href="news.html" class="mobile-navbar-item">News</a>
+    <a href="comp.html" class="mobile-navbar-item">Competitions</a>
+    <a href="gallery.html" class="mobile-navbar-item">Gallery</a>
+    <a href="members.html" class="mobile-navbar-item">Members</a>
+    <a onclick="switchTheme()" class="mobile-navbar-item" style="justify-self: end">Theme switcher</a>
 </div>
 
 <br><br><h1 class="bettercompass-blue title">Video Games Club!</h1>
 <div class="container">
     <h3>Welcome to BetterVideoGames, a video games club for all types of gamers!</h3>
     <p class="text-down">Current top games from our members:</p>
-    <ul style="margin-top: 10px; width: 250px;">
-        <li class="left">The Elder Scrolls V: Skyrim</li>
-        <li class="left">Super Smash Bros.</li>
-        <li class="left">Far Cry 6</li>
-        <li class="left">Halo Infinite</li>
-        <li class="left">Call of Duty: Modern Warfare</li>
+    <ul>
+        <li>The Elder Scrolls V: Skyrim</li>
+        <li>Super Smash Bros.</li>
+        <li>Far Cry 6</li>
+        <li>Halo Infinite</li>
+        <li>Call of Duty: Modern Warfare</li>
     </ul>
     <h3 class="text-down">About us!</h3>
     <p class="text-down">BetterVideoGames Club is a club designed to bring the local video games community together! We hold events and
@@ -49,12 +58,22 @@
     <p class="footer-item"><a href="https://github.com/JensenStamp/BetterVideoGamesClub" target="_blank">Site Source Code</a></p>
 </div>
 </body>
-<script>let light = localStorage.getItem("light") === "true"
-const body = document.getElementById("body")
-body.className = light ? "light" : "dark"
-function switchTheme() {
-  light = !light
-  localStorage.setItem("light", light)
-  body.className = light ? "light" : "dark"
-}</script>
+<script>
+    let light = localStorage.getItem("light") === "true"
+    const body = document.getElementById("body")
+    body.className = light ? "light" : "dark"
+    function switchTheme() {
+      light = !light
+      localStorage.setItem("light", light)
+      body.className = light ? "light" : "dark"
+    }
+    function mobileNavbar() {
+      const x = document.getElementById("mobile-navbar");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+</script>
 </html>
