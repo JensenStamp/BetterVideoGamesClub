@@ -3,16 +3,21 @@
 }
 
 :root {
-
     font-family: Inter, sans-serif;
 }
 
 .dark {
+    --scrollbar-hover: #2f2f2f;
+    --scrollbar-border: #181818;
+    --scrollbar-bg: #232323;
     background-color: #181818;
     color: white;
 }
 
 .light {
+    --scrollbar-hover: #d7d1d1;
+    --scrollbar-border: white;
+    --scrollbar-bg: #e8e7e7;
     background-color: white;
     color: black;
 }
@@ -231,4 +236,26 @@ a {
     .mobile-navbar-item {
         display: none;
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-bg) !important;
+    border: solid 3px var(--scrollbar-border) !important;
+    border-radius: 7px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover) !important;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #181818;
 }
